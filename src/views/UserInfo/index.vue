@@ -1,21 +1,14 @@
 <template>
-  <div class="container">
-    <h1>UserInfo</h1>
-  </div>
+    <div class="container">22</div>
 </template>
 
-<script>
-export default {
-  name: "Hello UserInfo",
-  props: {
-    msg: String,
-  },
-};
+<script lang="ts">
+export default {}
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .container {
-  width: 100%;
-  height: 100%;
+    width: 100%;
+    height: 100%;
 }
 </style>

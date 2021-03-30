@@ -1,21 +1,52 @@
 <template>
-  <div class="container">
-    <h1>{{ msg }}</h1>
-  </div>
+    <div class="file-item">
+        <div class="title">
+            <customer-icon color="#7da4fb" name="iconwenjian" />
+            {{ item.title }}
+        </div>
+        <div class="time">{{ item.updateTime }}</div>
+    </div>
 </template>
 
-<script>
+<script lang="ts">
+import { PropType } from 'vue'
+
+import { File } from '@/services/model/fileModel'
+import CustomerIcon from '@/components/CustomerIcon.vue'
+
 export default {
-  name: 'Hello FileItem',
-  props: {
-    msg: String
-  }
+    props: {
+        item: {
+            type: Object as PropType<File>,
+            default: {},
+        },
+    },
+    components: {
+        'customer-icon': CustomerIcon,
+    },
 }
 </script>
 
-<style scoped>
-.container {
+<style lang="scss" scoped>
+.file-item {
     width: 100%;
     height: 100%;
+    padding: 6px 12px;
+    border-radius: 4px;
+    box-shadow: 0 0 8px 0 $shadow;
+
+    .title {
+        font-size: 16px;
+        font-weight: 500;
+        color: $black;
+        text-align: left;
+    }
+
+    .time {
+        margin-top: 6px;
+        font-size: 12px;
+        color: $text-gary;
+        text-align: left;
+    }
 }
 </style>

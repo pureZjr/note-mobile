@@ -7,11 +7,6 @@ body {
     overflow: hidden;
 }
 
-svg:not(.no-fill),
-svg:not(.no-fill) path {
-    fill: currentcolor;
-}
-
 * {
     box-sizing: border-box;
 }

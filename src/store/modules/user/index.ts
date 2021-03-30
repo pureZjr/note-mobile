@@ -1,5 +1,4 @@
-
-import { UserInfo } from '@/types/user'
+import { UserInfo } from '@/services/model/userModel'
 
 interface States {
     userInfo: UserInfo
@@ -7,35 +6,35 @@ interface States {
 
 /**
  * states
-*/
+ */
 const states: States = {
     userInfo: {
         avatar: '',
         username: '',
         email: '',
         id: '',
-        token: ''
-    }
+        token: '',
+    },
 }
 
 /**
  * actions
-*/
+ */
 const actions = {
     setUserInfo: function ({ commit }: any, payload: UserInfo) {
         commit('setUserInfo', {
-            userInfo: payload
+            userInfo: payload,
         })
-    }
+    },
 }
 
 /**
  * mutations
-*/
+ */
 const mutations = {
     setUserInfo: function (state: any, payload: any) {
         state.userInfo = payload
-    }
+    },
 }
 
 export { states, actions, mutations }

@@ -1,5 +1,5 @@
 module.exports = {
-    outputDir: "dist",
+    outputDir: 'dist',
     //增加vue.config.js文件配置css
     css: {
         loaderOptions: {
@@ -10,4 +10,4 @@ module.exports = {
             },
         },
     },
-};
+}
